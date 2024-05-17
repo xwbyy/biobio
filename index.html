@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vynaa Valerie</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevents scrolling */
+    }
+
+    .bio-link-container {
+      position: relative;
+      text-align: center;
+      padding: 20px 0;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      color: white;
+      font-size: 18px;
+      margin-top: 10px; 
+    }
+
+    .bio-link-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .bio-link-container ul li {
+      margin: 5px 0;
+      width: calc(100% - 40px);
+    }
+
+    .bio-link-container ul li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #3498db;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      background: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+<video autoplay muted loop id="background-video">
+  <source id="video-source" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<audio autoplay loop>
+  <source src="mp3/SoundPina.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="bio-link-container">
+  <img src="https://telegra.ph/file/6535d5e11af435f0a602c.jpg" alt="Profile Image" class="profile-image">
+  <p class="name">Vynaa Valerie</p>
+  <ul>
+    <li><a href="sewa.html">SewaBot</a></li>
+    <li><a href="https://whatsapp.com/channel/0029VaHPYh6LNSa81M9Xcq1K">Channel</a></li>
+    <li><a href="https://instagram.com/vynaa_valerie">Instagram</a></li>
+    <li><a href="https://youtube.com/@VynaaChan">YouTube</a></li>
+  </ul>
+</div>
+
+<script>
+  var videos = [
+  "https://storage.itsrose.life/asupan/tiktok/99.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/98.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/97.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/96.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/95.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/94.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/93.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/92.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/100.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/101.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/102.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/104.mp4",
+  "https://storage.itsrose.life/asupan/tiktok/105.mp4"
+  ];
+
+  // Generate random index to select a random video from the array
+  var randomIndex = Math.floor(Math.random() * videos.length);
+  var randomVideo = videos[randomIndex];
+
+  // Set the source of the video element to the random video URL
+  var videoSource = document.getElementById('video-source');
+  videoSource.setAttribute('src', randomVideo);
+
+  // Get the video element
+  var backgroundVideo = document.getElementById('background-video');
+
+  // Load and play the new video
+  backgroundVideo.load();
+  backgroundVideo.play();
+</script>
+
+</body>
+</html>
